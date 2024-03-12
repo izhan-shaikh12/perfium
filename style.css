@@ -1,0 +1,421 @@
+/* Note that you only needs to edit the config to customize the button! */
+
+.signInButton {
+  /* Config start */
+  --signIn_width: 10rem;
+  --signIn_height: 2.5rem;
+  --signIn_bottomLeftTriangleSideLength: 1rem;
+  --signIn_topRightTriangleSideLength: 0.9rem;
+  /* Config end */
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid white;
+  width: 6rem;
+  height: 2.5rem;
+  background-color: #000000;
+  overflow: hidden;
+}
+
+.signInButton::before {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-width: 0 var(--signIn_bottomLeftTriangleSideLength) var(--signIn_bottomLeftTriangleSideLength) 0;
+  border-style: solid;
+  border-color: transparent transparent white transparent;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.2s;
+}
+
+.signInButton::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  width: calc(var(--signIn_topRightTriangleSideLength) * 1.4142135623730950488016887242097);
+  height: calc(var(--signIn_topRightTriangleSideLength) * 1.4142135623730950488016887242097);
+  outline: 1px solid white;
+  transform: translate(50%, -50%) rotate(45deg);
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.2s;
+}
+
+.signInButton:hover {
+  cursor: pointer;
+}
+
+.signInButton:hover::before {
+  --signIn_bottomLeftTriangleSideLength: calc(var(--signIn_width) + var(--signIn_height) - var(--signIn_topRightTriangleSideLength) + (var(--signIn_topRightTriangleSideLength) * 0.3));
+}
+
+.signInButton:focus-visible::before {
+  --signIn_bottomLeftTriangleSideLength: calc(var(--signIn_width) + var(--signIn_height) - var(--signIn_topRightTriangleSideLength) + (var(--signIn_topRightTriangleSideLength) * 0.3));
+}
+
+.signInButton:hover::after {
+  transform: translate(calc(50% + var(--signIn_topRightTriangleSideLength) * 0.1), calc((50% + var(--signIn_topRightTriangleSideLength) * 0.1) * -1)) rotate(45deg);
+}
+
+.signInButton:focus-visible::after {
+  transform: translate(calc(50% + var(--signIn_topRightTriangleSideLength) * 0.1), calc((50% + var(--signIn_topRightTriangleSideLength) * 0.1) * -1)) rotate(45deg);
+}
+
+.signInButton:hover>.signInButtonText {
+  color: black;
+}
+
+.signInButton:focus-visible>.signInButtonText {
+  color: black;
+}
+
+.signInButtonText {
+  margin: auto 0;
+  color: white;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 700;
+  text-align: center;
+  z-index: 1;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.2s;
+}
+
+.navbar-nav {
+  font-size: 17px;
+  font-weight: 600;
+  margin-left: 10px;
+}
+
+.Btn {
+  width: 140px;
+  height: 40px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(to right, #77530a, #ffd277, #77530a, #77530a, #ffd277, #77530a);
+  background-size: 250%;
+  background-position: left;
+  color: #ffd277;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition-duration: 1s;
+  overflow: hidden;
+}
+
+.Btn::before {
+  position: absolute;
+  content: "SUBSCRIBE";
+  color: #ffd277;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 97%;
+  height: 90%;
+  border-radius: 8px;
+  transition-duration: 1s;
+  background-color: rgba(0, 0, 0, 0.842);
+  background-size: 200%;
+}
+
+.Btn:hover {
+  background-position: right;
+  transition-duration: 1s;
+}
+
+.Btn:hover::before {
+  background-position: right;
+  transition-duration: 1s;
+}
+
+.izhan h1 {
+  font-size: 6vw;
+}
+
+.izhan button {
+  margin-left: 15vw;
+}
+
+.izhan p {
+  font-size: 1.6vw;
+}
+
+.free {
+  background-color: black;
+  height: 95vh;
+}
+
+.icon,
+span {
+  background-color: rgb(225, 203, 170);
+}
+
+.all img {
+  width: 10%;
+  aspect-ratio: 3/2;
+  height: 5vw;
+
+
+
+
+
+
+}
+
+.all {
+  display: flex;
+  gap: 7vw;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 50vw;
+
+}
+
+.left p {
+  width: 22em;
+
+}
+
+
+.photo {
+  display: flex;
+}
+
+.left {
+  display: flex;
+  flex-wrap: wrap;
+
+
+}
+
+.photo img {
+  height: 30vh;
+  border-radius: 10px;
+
+
+
+}
+
+.photo {
+  gap: 1vw;
+  flex-wrap: wrap;
+
+
+}
+
+.kom img {
+  height: 50vh;
+  flex-wrap: wrap;
+}
+
+.lo img {
+  margin-top: 3vw;
+}
+
+.lo {
+  flex-direction: column;
+}
+
+.taha img {
+  height: 50vh;
+  border-radius: 7px;
+}
+
+.taha i {
+  margin-left: 8vw;
+}
+
+.taha h6 {
+  margin-left: 0.5vw;
+  font-size: 1vw;
+}
+
+.store button {
+  padding: 0 20px;
+  border-radius: 10px;
+  height: 3.5vw;
+  background-color: #e2c58b;
+  border: none;
+  font-weight: 600;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.store {
+  align-items: center;
+  text-align: center;
+  justify-content: space-around;
+}
+
+.pol img {
+  height: 55vh;
+  border-radius: 20px;
+
+}
+
+.story button {
+  padding: 0 20px;
+  border-radius: 10px;
+  height: 3.5vw;
+  background-color: #e2c58b;
+  border: none;
+  font-weight: 600;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.rafay img {
+  height: 35vw;
+  border-radius: 20px;
+}
+
+.MA img {
+  height: 50vh;
+  aspect-ratio: 3/2;
+
+}
+
+.flex {
+  background-color: black;
+  height: 65vh;
+
+}
+
+.link ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+.link ul li {
+  list-style: none;
+}
+
+
+
+
+
+
+
+.Btn:active {
+  transform: scale(0.95);
+}
+
+@media(max-width:500px) {
+  .izhan button {
+    margin-left: 30vw;
+  }
+
+  .izhan h1 {
+    font-size: 13vw;
+  }
+
+
+  .izhan p {
+    font-size: 8vw;
+    margin-top: 10vw;
+  }
+
+  .izhan {
+    margin-top: 10vw;
+  }
+
+  .side img {
+    height: 400px;
+    margin-bottom: 100px;
+  }
+
+  .free {
+    background-color: black;
+    height: 140vh;
+  }
+
+  .left p {
+    text-align: center;
+  }
+
+  .mirha {
+    border: 1px solid gray;
+    text-align: center;
+    width: 20vw;
+    margin-left: 35vw;
+  }
+
+  .kom img {
+    width: 45vh;
+  }
+
+  .photo {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .taha h6 {
+    font-size: 4vw;
+    margin-left: 2vw;
+
+  }
+
+  .taha i {
+    margin-left: 20vh;
+  }
+
+  .pol img {
+    height: 50vh;
+    width: 45vh;
+  }
+
+  .pol {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  .minal {
+    text-align: center;
+    width: 100vw;
+  }
+
+  .story button {
+    padding: 0 30px;
+    height: 6vh;
+  }
+
+  .store button {
+    padding: 0 30px;
+    height: 6vh;
+  }
+
+  .minal h6 {
+    font-size: 7vw;
+  }
+
+  .six {
+    text-align: center;
+  }
+
+  .rafay img {
+    height: 37vh;
+  }
+
+  .eight p {
+    padding: 0 10px;
+  }
+  .flex{
+    height: 100vh;
+  }
+
+
+
+
+}
